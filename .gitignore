@@ -1,0 +1,26 @@
+.venv/
+venv/
+env/
+
+#Python
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+#Django
+ddb.sqlite3
+
+#arquivos de mídia
+media/
+
+#Sitemas operacional
+.DS_store
+Thumbs.db
+
+#Logs
+*.log
+
+#IDE
+.idea
+.vscode

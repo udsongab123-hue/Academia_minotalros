@@ -1,0 +1,394 @@
+:root {
+    margin: 0;
+    padding: 0;
+}
+
+.lateral1{
+    margin-top: auto;
+    padding-left: 10px;
+    padding: 20;
+    margin: 20;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.lateral1 {
+    background-color: rgb(42, 0, 139);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+
+
+
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+
+    z-index: 1000;
+
+
+}
+.lateral1.aberta {
+    transform: translateX(0);
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 5px 80px;
+
+}
+.menu li a {
+    text-decoration: none;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: block;
+
+
+
+}
+
+li {
+    margin-bottom: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+
+
+}
+
+
+.barra-superior {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background-color: #1c0a75;
+    padding: 15px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
+    color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    list-style: none;
+
+    z-index: 900;
+}
+.barra-superior li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 16px 3px;
+    white-space: nowrap;
+}
+
+.botao {
+    position: fixed;
+    left: 20px;
+    top: 15px;
+    background-color: #7412a1;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    width: 35px;
+    height: 30px;
+    font-size: 18px;
+    z-index: 1100;
+    transition: left 0.3s ease, background-color 0.3s ease;
+}
+
+
+.botao.aberto {
+    left: 270px;
+    background-color: #2512a8;
+    color: white;
+}
+
+.Logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.adicionar-conta {
+     width: 120px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 14px;
+}
+.rodape {
+     background-color: rgb(17, 0, 27);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    box-sizing: border-box;
+}
+.conta {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-conta {
+     display: none;
+    position: absolute;
+    top: 45px;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 150px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+
+
+.perfil-container {
+    position: relative;
+    display: inline-block;
+}
+
+.btn-perfil {
+    width: 40px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Caixinha */
+.menu-perfil {
+    display: none;
+
+    position: absolute;
+    right: 0;
+    top: 40px;
+    transition: 0.3s;
+    width: 180px;
+    padding: 15px;
+
+    background-color: rgb(17, 0, 27);
+    border-radius: 10px;
+
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+
+    z-index: 1000;
+}
+
+.menu-perfil h3 {
+    margin-top: 0;
+    text-align: center;
+
+}
+
+.menu-perfil button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.menu-perfil button:hover {
+    background-color: rgb(116, 0, 184);
+    transition: 0.5s;
+}
+
+/*-----------------------------*/
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: white;
+}
+
+
+.cartao-contatos {
+    display: none;
+
+    position: fixed;
+    top: 80px;
+    right: 30px;
+
+    width: 250px;
+    padding: 20px;
+
+    background-color: white;
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+
+    z-index: 3000;
+}
+
+.cartao-contatos h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #0b0144;
+}
+
+.cartao-contatos a {
+    display: block;
+
+    margin: 10px 0;
+    padding: 12px;
+
+    text-align: center;
+    text-decoration: none;
+
+    background-color: #0b0144;
+    color: white;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.cartao-contatos a:hover {
+    transform: scale(1.05);
+    background-color: #1c0a75;
+}
+
+/*----------------------------*/
+
+
+.contatos-container {
+    position: relative;
+}
+
+.cartao-contatos {
+    display: none;
+
+    position: absolute;
+    left: 120px;
+    top: 0;
+
+    width: 220px;
+    padding: 20px;
+
+    background-color: rgb(230, 230, 230);
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(141, 131, 131, 0.3);
+
+    z-index: 3000;
+}
+
+.cartao-contatos h2 {
+    margin: 0 0 15px 0;
+
+    text-align: center;
+
+    color: #1c0a75;
+}
+
+.cartao-contatos a {
+    display: block;
+
+    padding: 10px;
+    margin-top: 10px;
+
+    background-color: #1c0a75;
+    color: rgb(255, 255, 255);
+
+    text-align: center;
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.cartao-contatos a:hover {
+    transform: scale(1.05);
+    background-color: #1c0a75;
+}
+
+/*-------------------------*/
+
+.content {
+    position: relative;
+    margin-top: 130px;
+    width: 90%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #222;
+}
+
+.content h3 {
+    text-align: center;
+    color: #1c0a75;
+    font-size: 30px;
+}
+
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #000000;
+}
+
+.content th {
+    background-color: #1c0a75;
+    color: #ffffff;
+    padding: 12px;
+}
+
+.content td {
+    padding: 12px;
+    color: #222222;
+    border-bottom: 1px solid #000000;
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/*---------------------*/
+
+
